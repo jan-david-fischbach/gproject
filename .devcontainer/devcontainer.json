@@ -1,0 +1,16 @@
+{
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "gdsfactory",
+  "waitFor": "onCreateCommand",
+  "workspaceFolder": "/workspace/",
+  "shutdownAction": "stopCompose",
+  "postCreateCommand": "mamba install -y --file requirements.txt",
+  "portsAttributes": {"8082": {"onAutoForward": "ignore"}, "8084": {"onAutoForward": "silent"}},
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": ["ms-python.python"]
+    }
+  }
+}
