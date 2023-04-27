@@ -8,4 +8,6 @@ USER jovyan
 RUN mamba install -y paho-mqtt flask
 
 COPY --chown=jovyan klive_translator.py /usr/local/bin/
-COPY --chown=jovyan --chmod=777 controler.sh /usr/local/bin/
+COPY --chown=jovyan controler.sh /usr/local/bin/
+
+RUN chmod +x /usr/local/bin/controler.sh
