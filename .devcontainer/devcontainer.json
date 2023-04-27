@@ -14,5 +14,5 @@
   "mounts": [
     "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
   ],
-  "postStartCommand": "bash /usr/local/bin/controler.sh"
+  "postStartCommand": "bash /usr/local/bin/controler.sh &"
 }
