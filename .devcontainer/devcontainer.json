@@ -1,7 +1,6 @@
 {
   "build": { "dockerfile": "dockerfile" },
   "waitFor": "onCreateCommand",
-  "workspaceFolder": "/workspace/",
   "forwardPorts": [8084, 1883, 9001],
   "portsAttributes": {"8082": {"onAutoForward": "ignore"}},
   "customizations": {
@@ -11,8 +10,7 @@
       "extensions": ["ms-python.python"]
     }
   },
-  "mounts": [
-    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
-  ],
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
   "postStartCommand": "nohup bash -c '/usr/local/bin/controler.sh &'"
 }
