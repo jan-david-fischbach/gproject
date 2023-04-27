@@ -35,7 +35,7 @@ with tempfile.TemporaryDirectory() as tmpdirname:
                 shutil.copy(data["gds"], f"{tmpdirname}/{filename}") 
 
             mqtt_client = mqtt.Client("klive_translator")
-            mqtt_client.connect("mqtt")
+            mqtt_client.connect("localhost")
             mqtt_client.publish("klive", raw_data) 
             mqtt_client.disconnect()
     
