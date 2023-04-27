@@ -1,6 +1,6 @@
 FROM joamatab/gdsfactory
-COPY klive_translator.py /usr/local/bin/
-COPY controler.sh /usr/local/bin/
+COPY --chown=jovyan klive_translator.py /usr/local/bin/
+COPY --chown=jovyan controler.sh /usr/local/bin/
 USER root
 
 RUN apt update
