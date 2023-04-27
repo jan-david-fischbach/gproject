@@ -1,6 +1,4 @@
 FROM joamatab/gdsfactory
-COPY --chown=jovyan klive_translator.py /usr/local/bin/
-COPY --chown=jovyan controler.sh /usr/local/bin/
 USER root
 
 RUN apt update
@@ -9,3 +7,5 @@ RUN apt install -y mosquitto
 USER jovyan
 RUN mamba install -y paho-mqtt flask
 
+COPY --chown=jovyan klive_translator.py /usr/local/bin/
+COPY --chown=jovyan --chmod=777 controler.sh /usr/local/bin/
