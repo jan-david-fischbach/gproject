@@ -1,7 +1,7 @@
 {
-  "build": { "dockerfile": "dockerfile" },
+  "build": { "dockerfile": "dockerfile.minimal" },
   "waitFor": "onCreateCommand",
-  "forwardPorts": [8084, 1883, 9001],
+  "forwardPorts": [8084, 1883],
   "portsAttributes": {"8082": {"onAutoForward": "ignore"}},
   "customizations": {
     // Configure properties specific to VS Code.
