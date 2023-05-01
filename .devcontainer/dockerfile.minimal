@@ -1,7 +1,7 @@
 FROM jadafi/gdsfactory_minimal
 
 RUN apt update
-RUN apt install -y mosquitto
+RUN apt install -y mosquitto git
 
 RUN pip install paho-mqtt flask
 
