@@ -12,4 +12,9 @@ At the current stage two more configuration steps need to be taken, that can hop
 ## The Cool Stuff
 Now you can use gdsfactory to its full extent (including all features only available on linux). When you call `c.show()` on a component it should be rendered in KLayout if it is opened on your local machine. As an example you can run `python simple_layout.py` in the development container (which should be open in VS Code).
 
+## Storage Quotas
+You might not need all features gdsfactory has to offer: If that is the case and you want to save on Codespace storage space you can use the devcontainer based on the minimal gdsfactory container:
+![grafik](https://user-images.githubusercontent.com/92856893/236316260-b2ff9e71-3857-44b3-a96d-d6b764928b0c.png)
+Simply set up your codespace on the `Minimal_Devcontainer` branch.
+
 Have Fun!
